@@ -1,0 +1,40 @@
+/** LAVNYV STORE:
+Jacket (10) (400) 
+t shirt (10) (20)
+hat (10) (30)
+book (50) (100)
+glasses(2) (100)
+pm downloads leather (10) (550)
+album (100) (25)
+cd (100) (40)
+cassette (100) (100)
+spaghetti (50) (25)
+beef (50) (25)
+smoothies (50) (10)
+egg sandwich (10) (7)
+cookies (10) (5)
+wayne (10) (100)
+**/
+
+CREATE TABLE STORE (id INTEGER PRIMARY KEY,
+name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT INTO STORE VALUES (1, "jacket", 10, 450, 1); 
+INSERT INTO STORE VALUES (2, "t shirt", 10,20,1);
+INSERT INTO STORE VALUES (3, "hat", 10, 30,1);
+INSERT INTO STORE VALUES (4, "book", 50, 100,2);
+INSERT INTO STORE VALUES (5, "glasses", 2,100,1);
+INSERT INTO STORE VALUES (6, "pm downloads leather", 10,550,1);
+INSERT INTO STORE VALUES (7, "album", 100,100,2);
+INSERT INTO STORE VALUES (8, "cd", 100,100,2);
+INSERT INTO STORE VALUES (9, "cassette", 100,50,2 );
+INSERT INTO STORE VALUES (10, "spaghetti", 50,25,3);
+INSERT INTO STORE VALUES (11, "beef", 50,25,3);
+INSERT INTO STORE VALUES (12, "smoothies", 50,10,3);
+INSERT INTO STORE VALUES (13, "egg sandwich", 10,7,3);
+INSERT INTO STORE VALUES (14, "cookies", 10,5,3);
+INSERT INTO STORE VALUES (15, "wayne", 10,100,3);
+
+organized by aisle ...... 1st draft. LV
+
+SELECT aisle, SUM(quantity) FROM STORE group by aisle
